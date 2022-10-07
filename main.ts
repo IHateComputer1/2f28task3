@@ -1,17 +1,54 @@
+let count_down = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(1)
-    basic.pause(1000)
-    basic.showNumber(2)
-    basic.pause(1000)
-    basic.showNumber(3)
-    basic.pause(1000)
-    basic.showNumber(4)
-    basic.pause(1000)
-    basic.showNumber(5)
-    basic.showNumber(6)
-    basic.pause(1000)
+    count_down = 1
+    for (let index = 0; index < 6; index++) {
+        basic.showNumber(count_down)
+        basic.pause(1000)
+        count_down += 1
+    }
 })
-basic.showString("2F28")
-basic.forever(function () {
-	
+input.onButtonPressed(Button.B, function () {
+    count_down = 9
+    for (let index = 0; index < 10; index++) {
+        basic.showNumber(count_down)
+        basic.pause(1000)
+        count_down += -1
+    }
+    if (count_down == 0) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # . # .
+            . . # . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . # . .
+            . # . # .
+            # . . . #
+            . # . # .
+            . . # . .
+            `)
+        basic.showLeds(`
+            . # . # .
+            # . . . #
+            . . . . .
+            # . . . #
+            . # . # .
+            `)
+        basic.showLeds(`
+            # . . . #
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . #
+            `)
+    }
 })
