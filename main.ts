@@ -1,46 +1,14 @@
-let count_down = 0
 input.onButtonPressed(Button.A, function () {
-    count_down = -1
+    basic.showNumber(i_hatecomputer)
+    i_hatecomputer += 1
+})
+input.onButtonPressed(Button.AB, function () {
+	
 })
 input.onButtonPressed(Button.B, function () {
-    count_down = 9
-    while (count_down >= 0) {
-        basic.showNumber(count_down)
-        count_down += -1
-    }
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . # . .
-        . . . . .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . # . .
-        . # . # .
-        . . # . .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . # . .
-        . # . # .
-        # . . . #
-        . # . # .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . # . # .
-        # . . . #
-        . . . . .
-        # . . . #
-        . # . # .
-        `)
-    basic.showLeds(`
-        # . . . #
-        . . . . .
-        . . . . .
-        . . . . .
-        # . . . #
-        `)
+    basic.showNumber(i_hatecomputer)
+    i_hatecomputer += 10
 })
+let i_hatecomputer = 0
+i_hatecomputer = 0
+let rubbish = 0
